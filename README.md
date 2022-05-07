@@ -2,7 +2,7 @@
 
 ---
 
->This project is a testing project for the sauce-demo web page, it is a Maven project written in Java with the Selenium framework and tests some of the functionalities of the sauce-demo web store.  
+>This is a testing project for the sauce-demo web page, it is a Maven project that uses the Page Object Model (POM) design pattern; this project has been written in Java with the Selenium framework and tests some of the functionalities of the sauce-demo web store.  
 >
 >This project has the following test cases:
 >
