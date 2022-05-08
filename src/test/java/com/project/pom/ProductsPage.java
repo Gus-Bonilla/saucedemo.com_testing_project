@@ -11,6 +11,7 @@ public class ProductsPage extends Base{
 	
 	By pageTitleLocator = By.xpath("//span[@class=\"title\"]");
 	By addOnesieBtnLocator = By.id("add-to-cart-sauce-labs-onesie");
+	By logOutLinkLocator = By.id("logout_sidebar_link");
 	
 	public ProductsPage(WebDriver driver) {
 		super(driver);
@@ -30,5 +31,9 @@ public class ProductsPage extends Base{
 			click(addOnesieBtnLocator);
 		}
 		else System.out.println("Something went wrong :(\nThe product you want doesn't exist.");
+	}
+
+	public void logOut() {
+		// To implement
 	}
 }

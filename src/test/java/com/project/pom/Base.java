@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -32,6 +33,10 @@ public class Base {
 	
 	public void type(String inputText, By locator) {
 		driver.findElement(locator).sendKeys(inputText);
+	}
+	
+	public void sendKey(Keys key, By locator) {
+		driver.findElement(locator).sendKeys(key);
 	}
 	
 	public void click(By locator) {

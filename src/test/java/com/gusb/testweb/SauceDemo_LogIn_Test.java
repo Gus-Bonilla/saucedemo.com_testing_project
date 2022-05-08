@@ -41,4 +41,34 @@ public class SauceDemo_LogIn_Test {
 		logInPage.implicitlyWait(loadingWaitTime);
 		assertTrue(productsPage.isProductsPageDisplayed());
 	}
+	
+	@Test
+	public void testInvalidLogIn() {
+		logInPage.visitUrl(LogInPage.logInUrl);
+		logInPage.implicitlyWait(loadingWaitTime);
+		logInPage.invalidLogIn();
+		logInPage.implicitlyWait(loadingWaitTime);
+		assertFalse(productsPage.isProductsPageDisplayed());
+		assertTrue(logInPage.isErrorMsgDispayed());
+	}
+	
+	@Test
+	public void testLogOut() {
+		logInPage.visitUrl(LogInPage.logInUrl);
+		logInPage.implicitlyWait(loadingWaitTime);
+		logInPage.logIn();
+		logInPage.implicitlyWait(loadingWaitTime);
+		
+		assertTrue(productsPage.isProductsPageDisplayed());
+		
+		productsPage.logOut();
+		productsPage.implicitlyWait(loadingWaitTime);
+		
+		assertTrue(logInPage.isLogInPageDisplayed());
+		
+		logInPage.visitUrl(ProductsPage.productsUrl);
+		productsPage.implicitlyWait(loadingWaitTime);
+		
+		assertFalse(productsPage.isProductsPageDisplayed());
+	}
 }
