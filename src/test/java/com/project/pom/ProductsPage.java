@@ -11,7 +11,9 @@ public class ProductsPage extends Base{
 	
 	By pageTitleLocator = By.xpath("//span[@class=\"title\"]");
 	By addOnesieBtnLocator = By.id("add-to-cart-sauce-labs-onesie");
+	//By logOutLinkLocator = By.xpath("//a[contains(., \"Logout\")]");
 	By logOutLinkLocator = By.id("logout_sidebar_link");
+	By menuBtnLocator = By.id("react-burger-menu-btn");
 	
 	public ProductsPage(WebDriver driver) {
 		super(driver);
@@ -34,6 +36,10 @@ public class ProductsPage extends Base{
 	}
 
 	public void logOut() {
-		// To implement
+		click(logOutLinkLocator);
+	}
+	
+	public void openSideMenu() {
+		click(menuBtnLocator);
 	}
 }

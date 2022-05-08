@@ -6,8 +6,10 @@
 >
 >This project has the following test cases:
 >
-> - Log-In test case (with a valid user).  
-> - Add a product to the cart (in this case the product is the "Sauce Labs Onesie").
+> - Log-In test case (with a valid user).
+> - Invalid Log-In test case (with an invalid user).
+> - Log-Out test case.
+> - Add a product to the cart test case (in this case the product is the "Sauce Labs Onesie").
 
 ---
 
@@ -15,8 +17,9 @@
 >
 > 1. Clone this Git repository.
 > 2. Install the Java's JDK, Eclipse for Java developers, and the Chrome web driver; the libraries are installed automatically by Maven and are listed in the next section.
-> 3. Run the project as a JUnit 5 project.
-> 4. Verify the test results in the JUnit panel.
+> 3. Open the project's folder in the Eclipse IDE.
+> 4. Run the project as a JUnit 5 project.
+> 5. Verify the test results in the JUnit panel.
 
 ---
 

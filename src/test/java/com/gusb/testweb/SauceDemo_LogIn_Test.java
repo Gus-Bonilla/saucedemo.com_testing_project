@@ -61,6 +61,8 @@ public class SauceDemo_LogIn_Test {
 		
 		assertTrue(productsPage.isProductsPageDisplayed());
 		
+		productsPage.openSideMenu();
+		productsPage.implicitlyWait(loadingWaitTime);
 		productsPage.logOut();
 		productsPage.implicitlyWait(loadingWaitTime);
 		
@@ -70,5 +72,6 @@ public class SauceDemo_LogIn_Test {
 		productsPage.implicitlyWait(loadingWaitTime);
 		
 		assertFalse(productsPage.isProductsPageDisplayed());
+		assertTrue(logInPage.isErrorMsgDispayed());
 	}
 }
